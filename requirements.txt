@@ -1,0 +1,14 @@
+jupyterlab
+kmodes
+matplotlib
+numpy
+openpyxl
+pandas
+plotly
+scikit-learn
+scipy
+seaborn
+shap
+statsmodels
+streamlit
+xgboost
