@@ -24,7 +24,7 @@ elif selection == "Demographics":
     pages.demog()
 
 elif selection == "Clustering":
-    pages.findings()
+    pages.clustering()
 
 elif selection == "Who are not Saving for Old Age?":
     pages.wansoa()

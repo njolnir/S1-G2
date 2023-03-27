@@ -109,7 +109,7 @@ class pages:
         # Write the title
         st.title("Clustering")
     
-    def wanso():
+    def wansoa():
         st.title("Who are not Saving for Old Age?")
     
     def conclusion():
