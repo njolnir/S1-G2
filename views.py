@@ -101,10 +101,18 @@ class pages:
     def conclusion():
         #Write the title
         st.title("Conclusion")
+        st.write("1.) A majority of Filipinos are not saving for old age")
+        st.write("2.) There are different groups of Filipinos who did not save for old age yet:")
+        st.write("* Employed")
+        st.write("* Middle-income and below")
+        st.write("* Limited account ownership")
+        st.write("* Limited saving")
+        st.write("* Aged 18 to 49")
+        st.write("3.) Different groups need different types of support to be able to save for old age")
     
     def the_team():
         #Write the title
-        st.title("Team PANDS.RAKS")
+        st.title("Team PANDAS.RAKS")
 
 class Demographics:
         def show_age():
