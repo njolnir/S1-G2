@@ -14,7 +14,7 @@ ph_data = data.ProcessData.filter_data(df)
 cluster_data = data.ProcessData.cluster_data()
 
 # Setting general format to the graphs
-sns.set_theme(style="white", font="sans-serif")
+#sns.set_theme(style="white", font="sans-serif")
 
 class pages:
     #Page1 - Overview
@@ -110,6 +110,26 @@ class pages:
         st.write("* Aged 18 to 49")
         st.write("3.) Different groups need different types of support to be able to save for old age")
     
+    def recommendation():
+        st.title("Recommendation")
+    
+        tab_FL, tab_BUSA, tab_RSP = st.tabs(["Financial Literacy Initiatives",
+                                            "Boosting Underserved Savings Access",
+                                            "Retirement Savings Plan"])
+                                            
+        with tab_FL:
+            st.write("Advocating financial literacy as early as senior high school and providing practical advice and guidance on retirement planning can help \
+                         Filipinos save and invest effectively for their retirement, leading to greater financial security over the long term.")
+
+        with tab_BUSA:
+            st.write("Introducing low-cost and accessible savings mechanisms, enables more Filipinos even in underserved/rural areas to save for retirement.")
+            st.write("This increase in accessibility creates opportunities for Underserved Filipinos to achieve financial security in their retirement.")
+
+        with tab_RSP:
+            st.write("Making retirement savings programs more accessible and increasing public awareness about them can encourage Filipinos to save for their old age.")
+            st.write("By providing easier access and greater knowledge about these programs, more people can take advantage of them and start saving for their future.")
+            
+
     def the_team():
         #Write the title
         st.title("Team PANDAS.RAKS")
