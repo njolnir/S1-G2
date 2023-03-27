@@ -46,7 +46,7 @@ class pages:
 
     def demog():
         # Write the title
-        st.title("Demographics of Filipinos Saved for Old Age")
+        st.title("Demographics of Filipinos who Saved for Old Age")
             
         st.subheader("This shows a quick overview of the Age Group, Employment, Income Bracket and Account Ownership of Filipinos Who Saved for Old Age")
 
@@ -93,6 +93,18 @@ class pages:
             #####  
             ##### """)
             Demographics.show_accm()
+
+    def findings():
+        # Write the title
+        st.title("Findings and Clusterig")
+    
+    def conclusion():
+        #Write the title
+        st.title("Conclusion")
+    
+    def the_team():
+        #Write the title
+        st.title("Team PANDS.RAKS")
 
 class Demographics:
         def show_age():
@@ -295,6 +307,7 @@ class Demographics:
 
             # Show plot on Streamlit
             st.pyplot(fig)
+
 
 
 
