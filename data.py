@@ -29,7 +29,7 @@ class ProcessData:
         ph_data = data.query('economy == "Philippines"')
         ph_data = ph_data.query('fin44a == 1 or fin44a == 2')
         
-        cluster = ['age_group', 'emp_in', 'inc_q', 'account_fin', 'account_mob', 'saved', 'fin16', 'SOA']
+        cluster = ['age_group', 'emp_in', 'inc_q', 'account_fin', 'account_mob', 'saved', 'fin16', 'SOA', 'saved']
         cluster_data = ph_data[cluster]
 
         return cluster_data

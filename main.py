@@ -7,7 +7,8 @@ from views import pages
 list_of_pages = [
     "Overview",
     "Demographics",
-    "Findings",
+    "Clustering",
+    "Who are not Saving for Old Age?"
     "Conclusion",
     "Recommendation",
     "Pandas.RAKS"
@@ -22,8 +23,12 @@ if selection == "Overview":
 elif selection == "Demographics":
     pages.demog()
 
-elif selection == "Findings":
+elif selection == "Clustering":
     pages.findings()
+
+elif selection == "Who are not Saving for Old Age?":
+    pages.wansoa()
+
 
 elif selection == "Conclusion":
     pages.conclusion()

@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import streamlit as st
 import data
+import plotly.express as px
 
 # Load the data
 df = data.ProcessData.load_data()
@@ -50,7 +51,7 @@ class pages:
             
         st.subheader("This shows a quick overview of the Age Group, Employment, Income Bracket and Account Ownership of Filipinos Who Saved for Old Age")
 
-        tab_age, tab_emp, tab_inc, tab_accf, tab_accm = st.tabs(["Age Group", "Employment", "Income Bracket", "Traditional Banking", "Mobile Banking"])
+        tab_age, tab_emp, tab_inc, tab_accf, tab_accm, tab_save = st.tabs(["Age Group", "Employment", "Income Bracket", "Traditional Banking", "Mobile Banking", "Saved"])
 
         with tab_age:
             #demog by age group
@@ -94,9 +95,22 @@ class pages:
             ##### """)
             Demographics.show_accm()
 
-    def findings():
+        with tab_save:
+            #demog by saved
+            st.subheader("Who Saved in the Past Year")
+            st.markdown(""" 
+            ##### Majority (559 respondents) of Filipinos who worried for old age have saved the past year. \
+                Of which, there are 343 (61.3%) have been saving for old age. 
+            ##### """)
+
+            Demographics.show_saved()
+
+    def clustering():
         # Write the title
-        st.title("Findings and Clusterig")
+        st.title("Clustering")
+    
+    def wanso():
+        st.title("Who are not Saving for Old Age?")
     
     def conclusion():
         #Write the title
@@ -335,6 +349,26 @@ class Demographics:
 
             # Show plot on Streamlit
             st.pyplot(fig)
+
+        def show_saved():
+            save = cluster_data.groupby(['saved']).agg(
+                total_pop=('save_old_age', 'count'),
+                )
+            save = save.reset_index()
+            save.columns = ['saved', 'total_pop']
+    
+            saved_mapping = {
+                1: 'Yes',
+                0: 'No'
+            }
+            save = save.replace({'saved': saved_mapping})
+
+            # create the pie chart using Plotly Express
+            fig = px.pie(save, values='total_pop', names='save')
+
+            # display the chart using Streamlit
+            st.plotly_chart(fig)
+
 
 
 
