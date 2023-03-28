@@ -21,7 +21,7 @@ class pages:
     #Page1 - Overview
     def Overview():
         # Write the title and the subheader
-        st.image('01-Images/Ready.png')
+        st.image('01-Images/Pandas.Raks/Ready Na Ba.png')
     
         st.write(
             '''
@@ -32,7 +32,7 @@ class pages:
         )   
 
         # Load Photo
-        st.image('01-Images/9in10.png')
+        st.image('01-Images/Pandas.Raks/Ready Na Ba.png')
         st.write(
             '''
             Using the Global Findex 2021, we saw that 9 in 10 Filipinos are worried about not having enough money for old age. 
@@ -109,27 +109,27 @@ class pages:
         # Write the title
         st.title("Clustering")
         st.subheader("Clustering Criteria")
-        st.image('01-Images/Criteria.png')
+        st.image('01-Images/Pandas.Raks/Clustering.png')
 
         st.subheader("Clustering Result")
-        st.image('01-Images/Cluster.png')
+        st.image('01-Images/Pandas.Raks/Cluster Table.png')
     
     def wansoa():
-        st.title("Who are not Saving for Old Age?")
+        st.image('01-Images/Pandas.Raks/Not Saving.png')
 
         tab_dep, tab_wp, tab_mc = st.tabs(["Dependents", "Working Poor", "Middle-Class Earners"])
 
         with tab_dep:
             st.subheader("Dependents")
-            st.image('01-Images/Dependents.png')
+            st.image('01-Images/Pandas.Raks/Dependents.png')
         
         with tab_wp:
             st.subheader("Working Poor")
-            st.image('01-Images/Workingpoor.png')
+            st.image('01-Images/Pandas.Raks/Working Poor.png')
 
         with tab_mc:
             st.subheader("Middle-Class Earners")
-            st.image('01-Images/MiddleClass.png')    
+            st.image('01-Images/Pandas.Raks/Middle Class Earners.png')    
     
     def conclusion():
         #Write the title
@@ -146,21 +146,21 @@ class pages:
     def recommendation():
         st.title("Recommendation")
     
-        tab_FL, tab_BUSA, tab_RSP = st.tabs(["Financial Literacy Initiatives",
-                                            "Boosting Underserved Savings Access",
-                                            "Retirement Savings Plan"])
+#       tab_FL, tab_BUSA, tab_RSP = st.tabs(["Financial Literacy Initiatives",
+#                                           "Boosting Underserved Savings Access",
+#                                           "Retirement Savings Plan"])
                                             
-        with tab_FL:
-            st.write("Advocating financial literacy as early as senior high school and providing practical advice and guidance on retirement planning can help \
+#        with tab_FL:
+        st.write("1.) Advocating financial literacy as early as senior high school and providing practical advice and guidance on retirement planning can help \
                          Filipinos save and invest effectively for their retirement, leading to greater financial security over the long term.")
 
-        with tab_BUSA:
-            st.write("Introducing low-cost and accessible savings mechanisms, enables more Filipinos even in underserved/rural areas to save for retirement.")
-            st.write("This increase in accessibility creates opportunities for Underserved Filipinos to achieve financial security in their retirement.")
+#        with tab_BUSA:
+        st.write("2.) Introducing low-cost and accessible savings mechanisms, enables more Filipinos even in underserved/rural areas to save for retirement.\
+                 This increase in accessibility creates opportunities for Underserved Filipinos to achieve financial security in their retirement.")
 
-        with tab_RSP:
-            st.write("Making retirement savings programs more accessible and increasing public awareness about them can encourage Filipinos to save for their old age.")
-            st.write("By providing easier access and greater knowledge about these programs, more people can take advantage of them and start saving for their future.")
+#        with tab_RSP:
+        st.write("3.) Making retirement savings programs more accessible and increasing public awareness about them can encourage Filipinos to save for their old age.\
+                 By providing easier access and greater knowledge about these programs, more people can take advantage of them and start saving for their future.")
             
 
     def the_team():
