@@ -32,7 +32,7 @@ class pages:
         )   
 
         # Load Photo
-        st.image('01-Images/Pandas.Raks/Ready Na Ba.png')
+        st.image('01-Images/Pandas.Raks/9in10.png')
         st.write(
             '''
             Using the Global Findex 2021, we saw that 9 in 10 Filipinos are worried about not having enough money for old age. 
@@ -107,8 +107,8 @@ class pages:
 
     def clustering():
         # Write the title
-        st.title("Clustering")
-        st.subheader("Clustering Criteria")
+#        st.title("Clustering")
+#        st.subheader("Clustering Criteria")
         st.image('01-Images/Pandas.Raks/Clustering.png')
 
         st.subheader("Clustering Result")
@@ -120,15 +120,12 @@ class pages:
         tab_dep, tab_wp, tab_mc = st.tabs(["Dependents", "Working Poor", "Middle-Class Earners"])
 
         with tab_dep:
-            st.subheader("Dependents")
             st.image('01-Images/Pandas.Raks/Dependents.png')
         
         with tab_wp:
-            st.subheader("Working Poor")
             st.image('01-Images/Pandas.Raks/Working Poor.png')
 
         with tab_mc:
-            st.subheader("Middle-Class Earners")
             st.image('01-Images/Pandas.Raks/Middle Class Earners.png')    
     
     def conclusion():
