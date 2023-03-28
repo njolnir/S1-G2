@@ -21,7 +21,7 @@ class pages:
     #Page1 - Overview
     def Overview():
         # Write the title and the subheader
-        st.image('01-Images/00-Title.png')
+        st.image('01-Images/Ready.png')
     
         st.write(
             '''
@@ -32,7 +32,7 @@ class pages:
         )   
 
         # Load Photo
-        st.image('01-Images/00-Worry.png')
+        st.image('01-Images/9in10.png')
         st.write(
             '''
             Using the Global Findex 2021, we saw that 9 in 10 Filipinos are worried about not having enough money for old age. 

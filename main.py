@@ -14,7 +14,8 @@ list_of_pages = [
     "Pandas.RAKS"
 ]
 
-st.sidebar.title(':scroll: Main Pages')
+st.sidebar.title(':coffee: Hoy Pinoy! Ready na bang Tumanda?')
+st.sidebar.markdown("Team PANDAS.RAKS | DSFC11")
 selection = st.sidebar.radio("Go to: ", list_of_pages)
 
 if selection == "Overview":
