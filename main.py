@@ -8,7 +8,7 @@ list_of_pages = [
     "Overview",
     "Demographics",
     "Clustering",
-    "Who are not Saving for Old Age?"
+    "Who are not Saving for Old Age?",
     "Conclusion",
     "Recommendation",
     "Pandas.RAKS"
@@ -28,8 +28,7 @@ elif selection == "Clustering":
 
 elif selection == "Who are not Saving for Old Age?":
     pages.wansoa()
-
-
+    
 elif selection == "Conclusion":
     pages.conclusion()
 

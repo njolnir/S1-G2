@@ -108,9 +108,28 @@ class pages:
     def clustering():
         # Write the title
         st.title("Clustering")
+        st.subheader("Clustering Criteria")
+        st.image('01-Images/Criteria.png')
+
+        st.subheader("Clustering Result")
+        st.image('01-Images/Cluster.png')
     
     def wansoa():
         st.title("Who are not Saving for Old Age?")
+
+        tab_dep, tab_wp, tab_mc = st.tabs(["Dependents", "Working Poor", "Middle-Class Earners"])
+
+        with tab_dep:
+            st.subheader("Dependents")
+            st.image('01-Images/Dependents.png')
+        
+        with tab_wp:
+            st.subheader("Working Poor")
+            st.image('01-Images/Workingpoor.png')
+
+        with tab_mc:
+            st.subheader("Middle-Class Earners")
+            st.image('01-Images/MiddleClass.png')    
     
     def conclusion():
         #Write the title
@@ -351,23 +370,8 @@ class Demographics:
             st.pyplot(fig)
 
         def show_saved():
-            save = cluster_data.groupby(['saved']).agg(
-                total_pop=('save_old_age', 'count'),
-                )
-            save = save.reset_index()
-            save.columns = ['saved', 'total_pop']
-    
-            saved_mapping = {
-                1: 'Yes',
-                0: 'No'
-            }
-            save = save.replace({'saved': saved_mapping})
-
-            # create the pie chart using Plotly Express
-            fig = px.pie(save, values='total_pop', names='save')
-
-            # display the chart using Streamlit
-            st.plotly_chart(fig)
+            st.image('03-Codes/by save.png')
+                        
 
 
 
