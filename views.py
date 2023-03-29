@@ -25,21 +25,38 @@ class pages:
     
         st.write(
             '''
-            Financial inclusion means ensuring that financial services truly enhance the well-being of their users 
-            not just now but across the lifespan. 
+            Financial inclusion means ensuring that financial services truly enhance the well-being of their users not just now but across the lifespan. 
             Filipinos often joke about retirement and growing old but…ready na ba talaga tayong tumanda?
+
             '''
         )   
+
+        st.write(
+            '''We used the Global Financial Inclusion (Findex) Database 2021 from the World Bank to learn more about Filipinos’ saving behavior for old age. 
+            The Global Findex Database has been the definitive source of data on the ways in which adults around the world use financial services–from use of cards to mobile accounts, from payments to saving–to offer insights about financial resilience and gaps in financial inclusion.
+'''
+        )
+
+        st.write(
+            '''We found that  9 in 10 Filipinos are worried about not having enough money for old age.'''
+        )
 
         # Load Photo
         st.image('01-Images/Pandas.Raks/9in10.png')
         st.write(
             '''
-            Using the Global Findex 2021, we saw that 9 in 10 Filipinos are worried about not having enough money for old age. 
+            However, 61% of these people who are worried have not saved for old age. 
 
             '''
             )
         
+        st.image('01-Images/61.png')
+        st.write(
+            '''Our analysis zooms in on people who are worried about having enough money for old age and we aimed to:'''
+        )
+        st.write("* Describe Filipinos who are saving and not saving for old age")
+        st.write("* Identify groups of Filipinos who do not save for old ag")
+        st.write("* Recommend action steps to help Filipinos save for old age")
 
         #show ph_data
         expander = st.expander("Show PH_Data")
@@ -57,7 +74,9 @@ class pages:
             #demog by age group
             st.subheader("In terms of Age Group")
             st.markdown("""
-            ##### The older Filipinos get, the more likely they are to save for old age up until middle age. After middle age, saving for old age dips and rises again as they get older.
+            ##### The rise up until the middle age groups (25 to 34 and 35 to 49) may be because of more earning capacity and the need for saving for old age becoming more apparent. 
+            The dip after the middle age groups may be because of being in the age that saving for old age is meant for.
+
             ##### """)
             Demographics.show_age()
 
@@ -83,7 +102,7 @@ class pages:
             #demog by Traditional banking
             st.subheader("By Traditional Banking")
             st.markdown("""
-            #####  
+            ##### The proportion of those who saved for old age among those who have accounts in financial institutions is more than twice the proportion of those who saved for old age among those who do not have accounts in financial institutions.  
             ##### """)
             Demographics.show_accf()
 
@@ -91,13 +110,13 @@ class pages:
             #demog by mobile banking
             st.subheader("By Mobile Banking")
             st.markdown("""
-            #####  
+            ##### Similarly, the proportion of those who saved for old age among those who have mobile accounts is a lot higher than that of those who do not have mobile bank accounts.  
             ##### """)
             Demographics.show_accm()
 
         with tab_save:
             #demog by saved
-            st.subheader("Who Saved in the Past Year")
+            st.subheader("Who Saved in the Past Year?")
             st.markdown(""" 
             ##### Majority (559 respondents) of Filipinos who worried for old age have saved the past year. \
                 Of which, there are 343 (61.3%) have been saving for old age. 
@@ -109,9 +128,16 @@ class pages:
         # Write the title
 #        st.title("Clustering")
 #        st.subheader("Clustering Criteria")
+        st.write("We used K-Modes clustering to group Filipinos and understand their characteristics related to saving for old age. K-Modes clustering is an unsupervised machine learning technique that finds patterns in a dataset and groups observations based on their similarities in terms of different variables. ")
         st.image('01-Images/Pandas.Raks/Clustering.png')
-
+        
+        st.write('We used the following variables for clustering:')
+        st.write("   * Age, employment and income level are used because of the variations observed in terms of saving for old age across the levels of each variable as shown in the previous section.")
+        st.write("   * Account ownership in financial institutions and mobile banks are used because having an account is a gateway to other financial services such as saving. We also saw in the previous section that saving for old age varies depending on whether people have accounts or not.")
+        st.write("   * The variable indicating saving in the past year is used since it is the action for the variable we are mainly interested in.")
+        st.write("   * The variable indicating saving for old age is our main variable of interest.")
         st.subheader("Clustering Result")
+        st.write("After testing different numbers of clusters, we arrived at these five clusters.")
         st.image('01-Images/Pandas.Raks/Cluster Table.png')
     
     def wansoa():
@@ -141,7 +167,7 @@ class pages:
         st.write("3.) Different groups need different types of support to be able to save for old age")
     
     def recommendation():
-        st.title("Recommendation")
+        st.title("Recommendations")
     
 #       tab_FL, tab_BUSA, tab_RSP = st.tabs(["Financial Literacy Initiatives",
 #                                           "Boosting Underserved Savings Access",

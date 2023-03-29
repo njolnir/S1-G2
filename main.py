@@ -10,7 +10,7 @@ list_of_pages = [
     "Clustering",
     "Who are not Saving for Old Age?",
     "Conclusion",
-    "Recommendation",
+    "Recommendations",
     "Pandas.RAKS"
 ]
 
@@ -33,7 +33,7 @@ elif selection == "Who are not Saving for Old Age?":
 elif selection == "Conclusion":
     pages.conclusion()
 
-elif selection == "Recommendation":
+elif selection == "Recommendations":
     pages.recommendation()
 
 elif selection == "Pandas.RAKS":
