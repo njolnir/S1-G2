@@ -119,14 +119,14 @@ class pages:
             st.subheader("Who Saved in the Past Year?")
             st.markdown(""" 
             ##### Majority (559 respondents) of Filipinos who worried for old age have saved the past year. \
-                Of which, there are 343 (61.3%) have been saving for old age. 
+                Of which, there are 343 (61.3%) have been saving.
             ##### """)
 
             Demographics.show_saved()
 
     def clustering():
         # Write the title
-#        st.title("Clustering")
+        st.title("Clustering")
 #        st.subheader("Clustering Criteria")
         st.write("We used K-Modes clustering to group Filipinos and understand their characteristics related to saving for old age. K-Modes clustering is an unsupervised machine learning technique that finds patterns in a dataset and groups observations based on their similarities in terms of different variables. ")
         st.image('01-Images/Pandas.Raks/Clustering.png')
@@ -147,48 +147,105 @@ class pages:
 
         with tab_dep:
             st.image('01-Images/Pandas.Raks/Dependents.png')
-        
+            st.write("The first cluster that we have identified are individuals who do not have a source of income and capability of saving. Dependent on their household for financial support.")
+            st.write("* Almost 7 out of 10 finished only secondary education(K12)")
+            st.write("* More than 7 out of 10 does not possess account ownership")
+            st.write("* Almost 7 out of 10 do not have source of income")
+            st.write("Despite belonging to the middle 20% household income bracket, many individuals in this group are likely to be unemployed.\
+                      As a result, generating income for saving and retirement can be a challenge for them.")
+            st.write("To address this, the government could review job requirements for positions that do not necessarily require a college degree, create alternative income sources through livelihood \
+                     support programs, and provide financial literacy education to develop individuals' financial management skills.")
         with tab_wp:
             st.image('01-Images/Pandas.Raks/Working Poor.png')
-
+            st.write("Let us look deeper into The Working Poor cluster who belong to the next poorest 20%. These Filipinos do not own financial accounts, they are also incapable of saving for emergency funds, let alone for retirement,")
+            st.write("* Only 4 out of 10 of them are regular wage earners")
+            st.write("* Almost half have outstanding debts")
+            st.write("* More than 9 of 10 worry about bills, medical and educational expenses")
+            st.write("* More than 9 of 10 have difficulty with emergency funds")
+            st.write("The majority of the working poor either work for themselves or are contractual workers. They do not have access to the benefits that regular employees have.\
+                      The likelihood of going into debt and worrying about unexpected expenses is decreased by having medical insurance and other support.")
+            st.write("Contractualization will continue unless laws are changed or eliminated. According to labor leader Renato Magtubo, implementing rules to control labor markets and providing enough \
+                     and high-quality social services that promote human capacity development are just a few initiatives that can be taken. It is also crucial to create more and better jobs, increase productivity across all sectors, and give Filipinos access to modern skills. ")
         with tab_mc:
-            st.image('01-Images/Pandas.Raks/Middle Class Earners.png')    
+            st.image('01-Images/Pandas.Raks/Middle Class Earners.png')   
+            st.write("What is interesting about middle-class earners is they saved in the past year but not for old age so the first thing we tried to figure out is what were they saving for.")
+            st.write("It does not seem like they were saving for emergencies and majority still have difficulty accessing emergency funds. If they’re not saving for old age nor emergencies, they’re saving for something else.")
+            st.write("There’s limited data about saving behavior in the data set but we found that:")
+            st.write("* Majority are most worried about medical costs. People worry more about paying bills than old age.")
+            st.write("* Majority also borrowed money in the past year.")
+            st.write("These are possible expenses middle-class earners are saving for.")
+            st.write("A large proportion do not use banks to save or even informal saving clubs. This suggests people in this cluster still save money at home.")
+            st.write("So how can middle class-earners be supported?")
+            st.write("   1.) To have enough money for old age might mean addressing other issues first such as having health insurance since that is what they’re most worried about. After then, they might have space to save for old age.")
+            st.write("   2.) Saving formally can be promoted since it brings benefits such as keeping it safer and growing savings than keeping the money at home.")
+            st.write("   3.) Financial institutions can provide better saving plans to cater to different things people want to save for.")
+
+
     
     def conclusion():
         #Write the title
         st.title("Conclusion")
-        st.write("1.) A majority of Filipinos are not saving for old age")
-        st.write("2.) There are different groups of Filipinos who did not save for old age yet:")
-        st.write("* Employed")
-        st.write("* Middle-income and below")
-        st.write("* Limited account ownership")
-        st.write("* Limited saving")
-        st.write("* Aged 18 to 49")
-        st.write("3.) Different groups need different types of support to be able to save for old age")
+        st.write("To wrap up, a majority of Filipinos are still not saving for old age despite being worried about it.\
+                 There are different groups of Filipinos who did not save for old age yet: Most of them are employed. \
+                 However, their income level is middle-income and below. They have limited account ownership for both accounts in bank and mobile. \
+                 Most of them are also not saving in general. These groups include three age groups from 18 to 49 years old.")
+        st.write("These different groups need different types of support to be able to save for old age.")
     
     def recommendation():
         st.title("Recommendations")
-    
-#       tab_FL, tab_BUSA, tab_RSP = st.tabs(["Financial Literacy Initiatives",
-#                                           "Boosting Underserved Savings Access",
-#                                           "Retirement Savings Plan"])
-                                            
-#        with tab_FL:
-        st.write("1.) Advocating financial literacy as early as senior high school and providing practical advice and guidance on retirement planning can help \
-                         Filipinos save and invest effectively for their retirement, leading to greater financial security over the long term.")
+        st.subheader("Based on the our findings we have are proposing 3 action points that could help create the initiative of saving for old age amongst Filipinos")
 
-#        with tab_BUSA:
-        st.write("2.) Introducing low-cost and accessible savings mechanisms, enables more Filipinos even in underserved/rural areas to save for retirement.\
-                 This increase in accessibility creates opportunities for Underserved Filipinos to achieve financial security in their retirement.")
+        tab_reco1, tab_reco2, tab_reco3 = st.tabs(["Financial Literacy Initiatives", "Boosting Underserved Saving Access", "Retirement Savings Programs"])
 
-#        with tab_RSP:
-        st.write("3.) Making retirement savings programs more accessible and increasing public awareness about them can encourage Filipinos to save for their old age.\
-                 By providing easier access and greater knowledge about these programs, more people can take advantage of them and start saving for their future.")
+        with tab_reco1:
+            #Recommendation 1
+            st.markdown("""
+            Advocating financial literacy as early as senior high school and providing practical advice and guidance on retirement planning can help \
+                         Filipinos save and invest effectively for their retirement, leading to greater financial security over the long term.  
+            """)
+            st.image('01-Images/Pandas.Raks/Reco 1.png')
+
+            st.markdown("""
+            Initiatives such as this should be a project for both private and government sector. Private financial sector such as banks and smaller institutions should focus not only on financial literacy education but as well as initiatives that would entice customers to participate in banking/savings. While the government should focus on financial literacy in rural communities. Also the government can introduce financial literacy topics in curicullum as early as high school.
+            """)
+
+        with tab_reco2:
+            #Recommendation 2
+            st.markdown("""
+            Introducing low-cost and accessible savings mechanisms, enables more Filipinos even in underserved/rural areas to save for retirement.\
+                 This increase in accessibility creates opportunities for Underserved Filipinos to achieve financial security in their retirement.  
+            """) 
+            st.image('01-Images/Pandas.Raks/Reco 2.png')
+
+            st.markdown("""
+            To echo earlier recommendation, rural communities should be a main target for this. Private sector should create programs/promotions that could entice low income earners to save. The government should also focus on uplifting general economy within the philippines. Having a stable economy would create an avenue for low income earners to save rather than worry for day to day expenses.
+            """)  
+
+        with tab_reco3:
+            #Recommendation 3
+            st.markdown("""
+            Making retirement savings programs more accessible and increasing public awareness about them can encourage Filipinos to save for their old age.\
+                 By providing easier access and greater knowledge about these programs, more people can take advantage of them and start saving for their future  
+            """)
+            st.image('01-Images/Pandas.Raks/Reco 3.png')
+            st.markdown("""
+            Lastly, creating savings programs outside of the SSS/GSIS benefit will be helpful. This will give options of saving for Filipinos. 
+            These are examples of government agency initiatives. 
+            MP2 savings are funds under pag ibig. Although MP2 is technically a saving fund what this boasts is a high dividend rate that would allow growth of savings.
             
+            PESO (Personnal Equity and Savings Option) FUND is an initiative by SSS. This is a provident fund whose goal is to create additional funds for retirement of individuals. This also boasts better growth rate than typical banks. 
+            
+            Lastly is PERA (Personal Equity and Retirement Account). PERA is BSP initiative for saving for retirement. This allows banking institutions to set up PERA accounts for their customers. So far BPI and BDO have this kind of set up. 
+            A benefit of this is aside from the fund and higher growth rates. Money invested in can also be deducted from your annual tax. 
+            """)    
+
+
+                                            
+
 
     def the_team():
         #Write the title
-        st.title("Team PANDAS.RAKS")
+        st.image('01-Images/Team.png')
 
 class Demographics:
         def show_age():
